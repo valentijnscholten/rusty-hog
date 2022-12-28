@@ -251,6 +251,7 @@ where
             full_url, status, response_body
         )
     }
+    info!("Response text: \n{:?}", &response_body);
     let json_results = serde_json::from_str(&response_body).unwrap();
     debug!("Response JSON: \n{:?}", json_results);
     json_results
